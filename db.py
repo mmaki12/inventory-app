@@ -1,6 +1,10 @@
-import sqlite3
+#connecting it to database
 conn = sqlite3.connect('Invt.db')
 cursor = conn.cursor()
+
+
+#populating the database
+
 
 cursor.execute('''CREATE TABLE "Inventory" (
         "id"	TEXT,
@@ -195,3 +199,5 @@ cursor.executemany('INSERT INTO Sauces VALUES (?, ?, ?)', sauces)
 
 conn.commit()
 conn.close()
+
+
